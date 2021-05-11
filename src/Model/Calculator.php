@@ -4,16 +4,39 @@ declare(strict_types=1);
 
 namespace Lendable\Interview\Interpolation\Model;
 
+use Lendable\Interview\Interpolation\Exception\AmountValidationException;
+use Lendable\Interview\Interpolation\Exception\TermValidationException;
 use Lendable\Interview\Interpolation\Provider\DataProvider;
 
 class Calculator
 {
+    /**
+     * @var DataProvider
+     */
     private $dataProvider;
+    /**
+     * @var int
+     */
     private $max;
+    /**
+     * @var int
+     */
     private $min;
+    /**
+     * @var int
+     */
     private $minFee;
+    /**
+     * @var int
+     */
     private $maxFee;
+    /**
+     * @var float
+     */
     private $fee;
+    /**
+     * @var float
+     */
     private $interpolateVal;
 
     public function __construct()
@@ -21,6 +44,13 @@ class Calculator
         $this->dataProvider = new DataProvider();
     }
 
+    /**
+     * @param int $term
+     * @param float $amount
+     * @return float
+     * @throws AmountValidationException
+     * @throws TermValidationException
+     */
     public function getTotalFee(int $term, float $amount): float
     {
         //get min fee and max fee

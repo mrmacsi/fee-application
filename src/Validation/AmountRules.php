@@ -9,6 +9,9 @@ use Lendable\Interview\Interpolation\Exception\AmountValidationException;
 class AmountRules implements Rules
 {
 
+    /**
+     * @var float
+     */
     private $value;
 
     public function __construct(float $value)

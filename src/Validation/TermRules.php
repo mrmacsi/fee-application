@@ -8,6 +8,9 @@ use Lendable\Interview\Interpolation\Exception\TermValidationException;
 
 class TermRules implements Rules
 {
+    /**
+     * @var float
+     */
     private $value;
 
     public function __construct(float $value)

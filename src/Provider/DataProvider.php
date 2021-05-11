@@ -40,7 +40,7 @@ class DataProvider
      * @param int $amount
      * @param int $term
      * @param int $fee
-     * @return $this
+     * @return DataProvider
      * @throws AmountValidationException
      * @throws TermValidationException
      */

@@ -9,12 +9,12 @@ use Exception;
 class TermValidationException extends Exception implements ExceptionInterface
 {
     /**
-     * @var
+     * @var string|null
      */
     protected $message;
 
     /**
-     * CustomException constructor.
+     * TermValidationException constructor.
      * @param $message
      */
     public function __construct($message) {

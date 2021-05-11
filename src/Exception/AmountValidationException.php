@@ -9,12 +9,12 @@ use Exception;
 class AmountValidationException extends Exception implements ExceptionInterface
 {
     /**
-     * @var
+     * @var string|null
      */
     protected $message;
 
     /**
-     * CustomException constructor.
+     * AmountValidationException constructor.
      * @param $message
      */
     public function __construct($message) {
